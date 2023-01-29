@@ -1,7 +1,8 @@
 # Momentum React
 
 리액트로 크롬 확장프로그램 모멘텀(Momentum) 구현하기
-![Momentum pewview](![imgs](https://user-images.githubusercontent.com/36979880/215313516-b7c578b3-4455-40c8-b490-f3836132e171.png))
+
+![imgs](https://user-images.githubusercontent.com/36979880/215313516-b7c578b3-4455-40c8-b490-f3836132e171.png)
 
 
 ### 기능 구현 요구사항
