@@ -1,0 +1,29 @@
+.button {
+	cursor: pointer;
+	border: none;
+	background: none;
+	color: var(--color-white);
+	font-size: 1.4rem;
+	padding: 0 3px;
+	display: flex;
+	align-items: center;
+}
+.todoText {
+	margin: 0 0 0 10px;
+	color: var(--color-white);
+}
+.buttonBox {
+	display: flex;
+}
+.form {
+	display: flex;
+	flex: 1;
+}
+.editInp {
+	border: none;
+	background: none;
+	border-bottom: 1px solid var(--color-white);
+	font-size: 1rem;
+	color: var(--color-white);
+	width: calc(100% - 32px);
+}

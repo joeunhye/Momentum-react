@@ -1,0 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;500&family=Noto+Sans:wght@200;300;400;600&display=swap");
+
+:root {
+	--color-yellow: #ffc107;
+	--color-white: #fff;
+}
+
+body {
+	margin: 0;
+	font-family: "Noto Sans KR", sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	background-color: var(--color-bg-dark);
+}
+
+code {
+	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}

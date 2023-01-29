@@ -1,0 +1,12 @@
+.weather {
+	display: flex;
+	align-items: center;
+	position: absolute;
+	top: 2vh;
+	right: 2vw;
+	color: var(--color-white);
+}
+.weatherIcon {
+	font-size: 3rem;
+	margin-right: 10px;
+}

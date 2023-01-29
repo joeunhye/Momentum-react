@@ -1,0 +1,38 @@
+.list {
+	display: none;
+	background-color: rgba(0, 0, 0, 0.5);
+	border-radius: 5px;
+	width: 350px;
+	padding: 1rem 2rem;
+	position: absolute;
+	right: 2vw;
+	bottom: 8vh;
+}
+.list.active {
+	display: block;
+}
+.title {
+	margin: 0;
+	color: var(--color-white);
+}
+.listItems {
+	margin: 15px 0;
+	padding: 0;
+	list-style-type: none;
+}
+.listItems li {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin: 10px 0;
+}
+.todoBtn {
+	position: absolute;
+	right: 2vw;
+	bottom: 2vh;
+	border: none;
+	background: none;
+	font-size: 2.2rem;
+	cursor: pointer;
+	color: var(--color-white);
+}
