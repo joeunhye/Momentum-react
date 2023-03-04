@@ -1,3 +1,10 @@
+.settingBox .setting {
+	display: none;
+}
+.settingBox.active .setting {
+	display: block;
+}
+
 .setBtn {
 	position: absolute;
 	left: 2vw;

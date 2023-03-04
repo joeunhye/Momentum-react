@@ -10,7 +10,7 @@ export default function Set({ localFiles, setlocalFiles }) {
 	};
 
 	return (
-		<div>
+		<div className={`${styles.settingBox} ${isActive && styles.active}`}>
 			<div className={styles.setting}>
 				<h3 className={styles.settingTitle}>백그라운드 이미지 업로드</h3>
 				{/* 이미지 업로드 영역 */}
