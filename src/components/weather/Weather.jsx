@@ -15,7 +15,7 @@ export default function Weather() {
 			setWeatherIcon("🌦");
 		} else if (weather === "Snow") {
 			setWeatherIcon("🌨");
-		} else if (weather === "Atmosphere") {
+		} else if (weather === "Atmosphere" || weather === "Haze") {
 			setWeatherIcon("🌫");
 		} else if (weather === "Clear") {
 			setWeatherIcon("☀");

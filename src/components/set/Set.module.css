@@ -12,8 +12,8 @@
 	position: absolute;
 	left: 2vw;
 	bottom: 8vh;
-	height: 70vh;
-	width: 30vw;
+	height: 80vh;
+	width: 500px;
 	background-color: var(--color-white);
 	border-radius: 5px;
 	padding: 20px;

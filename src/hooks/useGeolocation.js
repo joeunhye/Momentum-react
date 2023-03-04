@@ -1,8 +1,6 @@
 import { useEffect, useState } from "react";
 
 const useGeolocation = () => {
-	// const [location, setLocation] = useState({});
-	const [error, setError] = useState();
 	const [weather, setWeather] = useState("");
 
 	const onGeoOk = position => {

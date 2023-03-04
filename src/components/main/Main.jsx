@@ -10,7 +10,13 @@ import TodoList from "../todoList/TodoList";
 import Set from "../set/Set";
 
 export default function User() {
+	const getBg = () => {
+		const bgimgs = localStorage.getItem("bg");
+		return bgimgs ? JSON.parse(bgimgs) : [];
+	};
+	const [localFiles, setlocalFiles] = useState(getBg);
 	const [user, setUser] = useState();
+	const [backgrounds, setBackgrounds] = useState();
 	let value;
 
 	const handleChange = e => {
@@ -25,20 +31,23 @@ export default function User() {
 	useEffect(() => {
 		const user = localStorage.getItem("user");
 		if (user) setUser(user);
-	}, []);
+
+		const bgUrls = localFiles.map(file => file.secure_url);
+		setBackgrounds(bgUrls);
+	}, [localFiles]);
 
 	const randomBg = () => {
-		return bg[Math.floor(Math.random() * bg.length)];
+		return backgrounds?.length ? backgrounds[Math.floor(Math.random() * backgrounds.length)] : `images/${bg[Math.floor(Math.random() * bg.length)]}`;
 	};
 
 	return (
-		<section className={styles.container} style={{ backgroundImage: `url(images/${randomBg()})` }}>
+		<section className={styles.container} style={{ backgroundImage: `url(${randomBg()})` }}>
 			<Weather />
 			<Clock />
 			{!user ? <UserForm handleSubmit={handleSubmit} handleChange={handleChange} /> : <Greetings user={user} />}
 			<Quotes />
 			<TodoList />
-			{/* <Set /> */}
+			<Set localFiles={localFiles} setlocalFiles={setlocalFiles} />
 		</section>
 	);
 }
