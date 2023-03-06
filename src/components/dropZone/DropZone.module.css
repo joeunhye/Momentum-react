@@ -98,3 +98,8 @@
 	cursor: pointer;
 	width: 100%;
 }
+.errorImgLength {
+	background-color: #ffdada;
+    padding: 5px 0;
+    color: #e53b3b;
+}
