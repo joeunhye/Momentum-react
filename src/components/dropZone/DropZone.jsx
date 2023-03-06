@@ -10,7 +10,7 @@ const DropZone = ({ localFiles, setlocalFiles }) => {
 	const [loading, setLoading] = useState(false);
 	const [uploadCheck, setUploadCheck] = useState(false);
 	const [error, setError] = useState(false);
-	const [errorImg, setErrorImg] = useState(0);
+	const [errorImgLength, setErrorImgLength] = useState(0);
 
 	//이미지 파일 드래그 앤 드롭 영역
 	const onDrop = useCallback(acceptedFiles => {
@@ -58,7 +58,7 @@ const DropZone = ({ localFiles, setlocalFiles }) => {
     			const files = response.data;
 				setlocalFiles(prev => [...prev, files])
 			} catch (error) {
-				setErrorImg(prev => prev + 1)
+				setErrorImgLength(prev => prev + 1)
 				setError(true);
 				return;
 			}
@@ -97,7 +97,7 @@ const DropZone = ({ localFiles, setlocalFiles }) => {
 				<div className={styles.dropzoneCtrl}>
 					{loading && <p>업로드 중</p>}
 					{error && <p>업로드 실패 ❌<br /> 업로드 실패한 이미지가 있습니다! 업로드를 다시 시도해주세요.</p>}
-					{error && errorImg > 0 && <p className={styles.errorImgLength}>업로드 실패 이미지 개수 ({errorImg})</p>}
+					{error && errorImgLength > 0 && <p className={styles.errorImgLength}>업로드 실패 이미지 개수 ({errorImgLength})</p>}
 					{files.length > 0 && (
 						<button className={styles.btn} onClick={handleUpload}>
 							Upload
